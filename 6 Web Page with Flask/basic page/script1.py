@@ -1,6 +1,7 @@
 '''
 This is a basic web page running with Flask.
 '''
+# There is no link to Hiroku in D2L.  I also can't use it because I couldn't convince GitHub that I'm a student.  They didn't like that I live in Illinois, and they didn't take any visual proof (my student ID) showing that I'm actually a student at Kenessaw.
 
 from flask import Flask, render_template, request
 #This is the Flask object, we are creating an instance of the Flask class and storing it in the variable app
@@ -25,6 +26,10 @@ def home():
 @app.route('/about/')
 def about():
     return render_template("about.html")
+
+@app.route('/norman/')
+def norman():
+    return render_template("mccord.html")
 
 if __name__=="__main__":
     app.run(debug=True)
